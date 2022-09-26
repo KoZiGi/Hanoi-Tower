@@ -1,0 +1,11 @@
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\bin\Debug\Hanoi-Tower.exe.config
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\bin\Debug\Hanoi-Tower.exe
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\bin\Debug\Hanoi-Tower.pdb
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csprojAssemblyReference.cache
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi_Tower.Form1.resources
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi_Tower.Game.resources
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi_Tower.Properties.Resources.resources
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csproj.GenerateResource.cache
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csproj.CoreCompileInputs.cache
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.exe
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.pdb
