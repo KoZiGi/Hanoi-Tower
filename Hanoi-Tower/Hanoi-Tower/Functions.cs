@@ -18,21 +18,20 @@ namespace Hanoi_Tower
 
         private bool winCheck(int discN) //if this method returns true then the array is correct and the player wins, takes one parameter(disc number)
         {
-            bool check = true;
-            for (int i = 0; i < discN; i++) if (data.Towers[To][i] != discN - i) check = false;
-            return check;
+            if (data.Towers[To].Count == discN) return true;
+            else return false;
         }
        
         public void Move(int start, int dest) //checks if the move is valid and moves the discs
         {
-            if (data.Towers[dest].Count==0)
+            if (data.Towers[dest].Count==0) //checks if the destination tower has elements in it
             {
-                data.Towers[dest].Add ( data.Towers[start][data.Towers[start].Count - 1]);
+                data.Towers[dest].Add ( data.Towers[start][data.Towers[start].Count - 1]); //move the disc
                 data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
             }
-            else if(data.Towers[dest][data.Towers[dest].Count-1]> data.Towers[start][data.Towers[start].Count - 1])
+            else if(data.Towers[dest][data.Towers[dest].Count-1]> data.Towers[start][data.Towers[start].Count - 1]) //checks if the destination tower's last element is larger than the start tower's last element 
             {
-                data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);
+                data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);    //move the disc
                 data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
             }
         }
