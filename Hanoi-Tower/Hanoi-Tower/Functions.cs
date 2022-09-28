@@ -18,8 +18,8 @@ namespace Hanoi_Tower
 
         private bool winCheck(int discN) //if this method returns true then the array is correct and the player wins, takes one parameter(disc number)
         {
-            if (data.Towers[To].Count == discN) return true;
-            else return false;  //anyád
+            if (data.Towers[To-1].Count == discN) return true;
+            else return false;  
         }
         
         public void Move(int start, int dest) //checks if the move is valid and moves the discs
