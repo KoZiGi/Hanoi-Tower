@@ -23,15 +23,18 @@ namespace Hanoi_Tower
             return check;
         }
        
-        public void Move(int start, int dest)   // disc move and compatibility check, takes 2 parameter(start tower index, destination tower index)
+        public void Move(int start, int dest) //checks if the move is valid and moves the discs
         {
-            if (data.Towers[dest][data.Towers[dest].Count - 1] > data.Towers[start][data.Towers[start].Count - 1]|| data.Towers[dest].Count==0)
+            if (data.Towers[dest].Count==0)
             {
-                data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);    //add the chosen disc to the destination tower
-                data.Towers[start].RemoveAt(data.Towers[start].Count-1);            //remove the chosen disc from its start tower
+                data.Towers[dest].Add ( data.Towers[start][data.Towers[start].Count - 1]);
+                data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
+            }
+            else if(data.Towers[dest][data.Towers[dest].Count-1]> data.Towers[start][data.Towers[start].Count - 1])
+            {
+                data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);
+                data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
             }
         }
-
-
     }
 }
