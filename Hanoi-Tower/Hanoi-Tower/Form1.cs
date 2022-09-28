@@ -19,7 +19,7 @@ namespace Hanoi_Tower
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (numericUpDown2.Value == numericUpDown3.Value)
+            if (numericUpDown2.Value == numericUpDown3.Value)   //error check, the start and the destination tower cant be the same
             {
                 MessageBox.Show("NEM", "NEM", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
