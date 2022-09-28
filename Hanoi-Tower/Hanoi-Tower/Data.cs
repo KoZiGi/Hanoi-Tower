@@ -8,7 +8,7 @@ namespace Hanoi_Tower
 {
     class Data
     {
-        public static List<List<int>> Towers;
+        public List<List<int>> Towers;
         public Data(int discN, int towerToBeFilled)
         {
             Towers = new List<List<int>>()
@@ -24,7 +24,7 @@ namespace Hanoi_Tower
         {
             List<int> temp = new List<int>();
             for (int i = 0; i < discs; i++)
-                temp.Add(i);
+                temp.Add(discs-i);
             return temp;
         }
     }
