@@ -8,7 +8,7 @@ namespace Hanoi_Tower
 {
     class Data
     {
-        public static List<List<int>> Towers;
+        public List<List<int>> Towers;
         public Data(int discN, int towerToBeFilled)
         {
             Towers = new List<List<int>>()
