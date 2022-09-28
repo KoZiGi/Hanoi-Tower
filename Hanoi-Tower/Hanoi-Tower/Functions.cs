@@ -82,7 +82,7 @@ namespace Hanoi_Tower
             for (int i = 1; i < 4; i++)
                 towers.Add(GenTower(10, data.DiscN * 15, i));
             return towers;
-
+        }
         private bool winCheck(int discN) //if this method returns true then the array is correct and the player wins
         {
             if (data.Towers[To].Count == discN) return true;
@@ -111,17 +111,14 @@ namespace Hanoi_Tower
                 }
             }
         }
-    }
-}
-       
         public void Move(int start, int dest) //checks if the move is valid and moves the discs
         {
-            if (data.Towers[dest].Count==0)
+            if (data.Towers[dest].Count == 0)
             {
-                data.Towers[dest].Add ( data.Towers[start][data.Towers[start].Count - 1]);
+                data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);
                 data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
             }
-            else if(data.Towers[dest][data.Towers[dest].Count-1]> data.Towers[start][data.Towers[start].Count - 1])
+            else if (data.Towers[dest][data.Towers[dest].Count - 1] > data.Towers[start][data.Towers[start].Count - 1])
             {
                 data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);
                 data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
