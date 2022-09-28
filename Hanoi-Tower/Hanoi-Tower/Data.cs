@@ -8,16 +8,22 @@ namespace Hanoi_Tower
 {
     class Data
     {
-        public static List<List<int>> Towers;
-        public Data(int discN, int towerToBeFilled)
+        public List<List<int>> Towers;
+        public int DiscN;
+        public int From;
+        public int To;
+        public Data(int from, int to, int discN)
         {
+            From = from;
+            To = to;
+            DiscN = discN;
             Towers = new List<List<int>>()
             {
                 new List<int>(),
                 new List<int>(),
                 new List<int>()
             };
-            Towers[towerToBeFilled - 1] = FillTower(discN);
+            Towers[from-1] = FillTower(discN);
         }
 
         private List<int> FillTower(int discs)
