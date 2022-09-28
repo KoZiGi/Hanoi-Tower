@@ -18,7 +18,7 @@ namespace Hanoi_Tower
         public Game(int korong, int from, int to)
         {
             InitializeComponent();
-            data = new Data(korong, from);
+            data = new Data(from, to, korong);
             dummyDisplay();
             functions = new Functions(data,to);
         }
@@ -46,6 +46,21 @@ namespace Hanoi_Tower
         {
             functions.Move(Convert.ToInt32(numericUpDown1.Value)-1, Convert.ToInt32(numericUpDown2.Value)-1);
             dummyDisplay();
+            //data = new Data(from,to,korong);
+            //functions = new Functions(data);
+            InitDisplay();
+            
         }
+        private void InitDisplay()
+        {
+            foreach (Panel p in functions.GenPanels())
+                Controls.Add(p);
+            foreach (Panel p in Controls)
+                if (p.Name.Contains("Disc"))
+                    p.BringToFront();
+            foreach (Label l in functions.GenTowerLabels())
+                Controls.Add(l);
+        }
+
     }
 }
