@@ -27,7 +27,6 @@ namespace Hanoi_Tower
             {
                 Game gamm = new Game(Convert.ToInt32(numericUpDown1.Value), Convert.ToInt32(numericUpDown2.Value), Convert.ToInt32(numericUpDown3.Value));
                 gamm.Show();
-                Hide();
             }
         }
 

@@ -35,7 +35,7 @@ namespace Hanoi_Tower
         {
             List<Label> labels = new List<Label>();
             for (int i = 1; i < 4; i++)
-                GenLabel($"Tower{i}Lbl", i);
+                labels.Add(GenLabel($"Tower{i}Lbl", i));
             return labels;
         }
         private Label GenLabel(string text, int x)
@@ -44,12 +44,11 @@ namespace Hanoi_Tower
             {
                 Text = GetWhich(text),
                 Name = text,
-                Left = x * 50,
-                Top = data.DiscN * 15 + 20,
-                BackColor = Color.Black,
+                AutoSize = true,
+                Left = x * 100-6,
+                Top = data.DiscN*15 + 20,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Font = new Font("Times New Roman", 12)
-
+                Font = new Font("Times New Roman", 12),
             };
         }
         private string GetWhich(string text)
@@ -70,7 +69,7 @@ namespace Hanoi_Tower
             {
                 Name = $"Disc{DiscN}",
                 Top = 10 + (DiscN * 15),
-                Left = ((data.DiscN-DiscN)*(100/data.DiscN)/2)+((data.From)*100),
+                Left = ((data.DiscN-DiscN)*(100/data.DiscN)/2)+((data.From)*(100/data.DiscN)),
                 Width = (100/data.DiscN)*width,
                 Height = height,
                 BackColor = Color.FromArgb(250,50,250)
@@ -102,14 +101,19 @@ namespace Hanoi_Tower
         }
         public void Display(List<Panel> discs)
         {
-
+            int i = 0, g = 0;
             foreach (List<int> list in data.Towers)
             {
+                g = 0;
                 foreach (int disc in list)
-                {
-                    
-                }
+                    ModifyDisc(discs.First(x => x.Name == $"Disc{disc}"), i + 1, g + 1);   
+                i++;
             }
+        }
+        public void ModifyDisc(Panel disc, int index, int height)
+        {
+            disc.Left = index * 100;
+            disc.Top = data.DiscN * 15 - height * 10;
         }
         public void Move(int start, int dest) //checks if the move is valid and moves the discs
         {
@@ -123,6 +127,11 @@ namespace Hanoi_Tower
                 data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);
                 data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
             }
+        }
+        public void TowerClick(object sender, EventArgs e)
+        {
+            Label s = sender as Label;
+            MessageBox.Show(s.Text);
         }
     }
 }
