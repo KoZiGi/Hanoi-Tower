@@ -26,7 +26,7 @@ namespace Hanoi_Tower
             Towers[from-1] = FillTower(discN);
         }
 
-        private List<int> FillTower(int discs)
+        private List<int> FillTower(int discs)  // this function returns the disc filled start tower, takes 1 parameter(disc number)
         {
             List<int> temp = new List<int>();
             for (int i = 0; i < discs; i++)
