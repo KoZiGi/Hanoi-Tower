@@ -30,7 +30,7 @@ namespace Hanoi_Tower
         {
             List<int> temp = new List<int>();
             for (int i = 0; i < discs; i++)
-                temp.Add(i);
+                temp.Add(discs-i);
             return temp;
         }
     }

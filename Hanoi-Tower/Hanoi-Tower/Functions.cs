@@ -10,10 +10,12 @@ namespace Hanoi_Tower
 {
     class Functions
     {
-        private Data data;
-        public Functions(Data GameData)
+        private Data data; //basic info about the game like start tower, disc number
+        private int To; //index of target tower
+        public Functions(Data GameData, int to)
         {
             data = GameData;
+            To = to;
         }
         public List<Panel> GenPanels()
         {
@@ -81,6 +83,10 @@ namespace Hanoi_Tower
                 towers.Add(GenTower(10, data.DiscN * 15, i));
             return towers;
 
+        private bool winCheck(int discN) //if this method returns true then the array is correct and the player wins
+        {
+            if (data.Towers[To].Count == discN) return true;
+            else return false;
         }
         private Panel GenTower(int width, int height, int towerN)
         {
@@ -103,6 +109,22 @@ namespace Hanoi_Tower
                 {
                     
                 }
+            }
+        }
+    }
+}
+       
+        public void Move(int start, int dest) //checks if the move is valid and moves the discs
+        {
+            if (data.Towers[dest].Count==0)
+            {
+                data.Towers[dest].Add ( data.Towers[start][data.Towers[start].Count - 1]);
+                data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
+            }
+            else if(data.Towers[dest][data.Towers[dest].Count-1]> data.Towers[start][data.Towers[start].Count - 1])
+            {
+                data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);
+                data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
             }
         }
     }
