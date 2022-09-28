@@ -9,3 +9,14 @@ C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\H
 C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csproj.CoreCompileInputs.cache
 C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.exe
 C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.pdb
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\bin\Debug\Hanoi-Tower.exe.config
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\bin\Debug\Hanoi-Tower.exe
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\bin\Debug\Hanoi-Tower.pdb
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csprojAssemblyReference.cache
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi_Tower.Form1.resources
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi_Tower.Game.resources
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi_Tower.Properties.Resources.resources
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csproj.GenerateResource.cache
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csproj.CoreCompileInputs.cache
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.exe
+C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.pdb

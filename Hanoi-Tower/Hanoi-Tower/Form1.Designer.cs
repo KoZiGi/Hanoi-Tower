@@ -58,7 +58,7 @@ namespace Hanoi_Tower
             this.numericUpDown1.Size = new System.Drawing.Size(168, 20);
             this.numericUpDown1.TabIndex = 0;
             this.numericUpDown1.Value = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             0});
@@ -130,7 +130,7 @@ namespace Hanoi_Tower
             this.numericUpDown3.Size = new System.Drawing.Size(51, 20);
             this.numericUpDown3.TabIndex = 0;
             this.numericUpDown3.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});

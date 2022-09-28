@@ -29,5 +29,7 @@ namespace Hanoi_Tower
                 gamm.Show();
             }
         }
+
+
     }
 }
