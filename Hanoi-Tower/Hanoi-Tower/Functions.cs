@@ -15,6 +15,9 @@ namespace Hanoi_Tower
         public Functions(Data GameData, int to)
         {
             data = GameData;
+            data.Discs = GenDiscs();
+            data.TowersP = GenTowers();
+            data.Labels = GenTowerLabels();
             To = to;
         }
         public List<Panel> GenPanels()
@@ -28,7 +31,7 @@ namespace Hanoi_Tower
         {
             List<Panel> discs = new List<Panel>();
             for (int i = 0; i < data.DiscN; i++)
-                discs.Add(GenDisc(i+1, 10, i));
+                discs.Add(GenDisc(i+1, 10, i, GenTowers()));
             return discs;
         }
         public List<Label> GenTowerLabels()
@@ -45,7 +48,7 @@ namespace Hanoi_Tower
                 Text = GetWhich(text),
                 Name = text,
                 AutoSize = true,
-                Left = x * 100-6,
+                Left = x * 105-6,
                 Top = data.DiscN*15 + 20,
                 TextAlign = ContentAlignment.MiddleCenter,
                 Font = new Font("Times New Roman", 12),
@@ -63,16 +66,28 @@ namespace Hanoi_Tower
                     return "C";
             }
         }
-        private Panel GenDisc(int width, int height, int DiscN)
+        private int GetTower(string text)
+        {
+            switch (text)
+            {
+                case "A":
+                    return 0;
+                case "B":
+                    return 1;
+                default:
+                    return 2;
+            }
+        }
+        private Panel GenDisc(int width, int height, int DiscN, List<Panel> towers)
         {
             return new Panel()
             {
                 Name = $"Disc{DiscN}",
                 Top = 10 + (DiscN * 15),
-                Left = ((data.DiscN-DiscN)*(100/data.DiscN)/2)+((data.From)*(100/data.DiscN)),
-                Width = (100/data.DiscN)*width,
+                Left = (towers[data.From - 1].Left - ((100 / data.DiscN) * width) / 2) + 5,
+                Width = (100 / data.DiscN) * width,
                 Height = height,
-                BackColor = Color.FromArgb(250,50,250)
+                BackColor = Color.HotPink
             };
         }
         private List<Panel> GenTowers()
@@ -82,9 +97,9 @@ namespace Hanoi_Tower
                 towers.Add(GenTower(10, data.DiscN * 15, i));
             return towers;
         }
-        private bool winCheck(int discN) //if this method returns true then the array is correct and the player wins
+        private bool winCheck() //if this method returns true then the array is correct and the player wins
         {
-            if (data.Towers[To].Count == discN) return true;
+            if (data.Towers[To-1].Count == data.DiscN) return true;
             else return false;
         }
         private Panel GenTower(int width, int height, int towerN)
@@ -93,31 +108,40 @@ namespace Hanoi_Tower
             {
                 Width = width,
                 Height = height,
-                Left = towerN * 100,
+                Left = towerN * 105,
                 Top = 10,
                 Name = $"tower{towerN}",
                 BackColor = Color.Black
             };
         }
-        public void Display(List<Panel> discs)
+        public void Display()
         {
             int i = 0, g = 0;
-            foreach (List<int> list in data.Towers)
+            foreach (List<int> discs in data.Towers)
             {
                 g = 0;
-                foreach (int disc in list)
-                    ModifyDisc(discs.First(x => x.Name == $"Disc{disc}"), i + 1, g + 1);   
+                foreach (int disc in discs)
+                {
+                    Panel disk = data.Discs.First(x => x.Name == $"Disc{disc - 1}");
+                    disk.Left = data.TowersP[i].Left - disk.Width/2 + 5;
+                    disk.Top = 10 + ((data.DiscN - g - 1) * 15);
+                    g++;
+                }
                 i++;
             }
         }
-        public void ModifyDisc(Panel disc, int index, int height)
+        public void ModifyDisc(Panel disc, int index, int height, List<Panel> towers)
         {
-            disc.Left = index * 100;
+            disc.Left = towers[index].Left - (disc.Width/2);
             disc.Top = data.DiscN * 15 - height * 10;
         }
         public void Move(int start, int dest) //checks if the move is valid and moves the discs
         {
-            if (data.Towers[dest].Count == 0)
+            if (data.Towers[start].Count==0)
+            {
+                MessageBox.Show("pnjiom ");
+            }
+            else if (data.Towers[dest].Count == 0)
             {
                 data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);
                 data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
@@ -127,11 +151,48 @@ namespace Hanoi_Tower
                 data.Towers[dest].Add(data.Towers[start][data.Towers[start].Count - 1]);
                 data.Towers[start].RemoveAt(data.Towers[start].Count - 1);
             }
+            
         }
         public void TowerClick(object sender, EventArgs e)
         {
             Label s = sender as Label;
-            MessageBox.Show(s.Text);
+            s.ForeColor = Color.Red;
+            if (!data.selected)
+            {
+                data.selected = true;
+                data.before = s.Text;
+            }
+            else if (data.selected)
+            {
+                Move(GetTower(data.before), GetTower(s.Text));
+                Display();
+                ResetColors();
+                if (winCheck())
+                {
+                    DialogResult g = MessageBox.Show("Gratulálok győztél!", "Győztél", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (g == DialogResult.Yes)
+                    {
+                        data.f.Show();
+                        Game.ActiveForm.Close();
+                    }
+                       
+                    else
+                    {
+                        MessageBox.Show("Akkor kétségben vonhatatlanul jogomban áll nem itt lenni.");
+                        Game.ActiveForm.Close();
+                        data.f.Close();
+                    }
+                }
+                data.selected = false;
+                data.before = "";
+            }
+        }
+        private void ResetColors()
+        {
+            foreach (Label l in data.Labels)
+            {
+                l.ForeColor = Color.Black;
+            }
         }
     }
 }

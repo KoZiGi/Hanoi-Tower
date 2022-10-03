@@ -15,6 +15,7 @@ namespace Hanoi_Tower
         public Form1()
         {
             InitializeComponent();
+            Icon = Properties.Resources.vodor1;
         }
 
         private void button1_Click(object sender, EventArgs e)

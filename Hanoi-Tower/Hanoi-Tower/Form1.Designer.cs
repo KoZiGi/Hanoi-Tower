@@ -159,7 +159,6 @@ namespace Hanoi_Tower
             this.MaximumSize = new System.Drawing.Size(207, 184);
             this.MinimumSize = new System.Drawing.Size(207, 184);
             this.Name = "Form1";
-            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();

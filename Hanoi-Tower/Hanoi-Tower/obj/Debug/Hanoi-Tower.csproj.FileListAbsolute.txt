@@ -19,4 +19,4 @@ C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\
 C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csproj.CoreCompileInputs.cache
 C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.exe
 C:\Users\ginalzsolt\Source\Repos\KoZiGi\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.pdb
-C:\Users\zickbalazs\Source\Repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csproj.AssemblyReference.cache
+C:\Users\zickbalazs\source\repos\Hanoi-Tower\Hanoi-Tower\Hanoi-Tower\obj\Debug\Hanoi-Tower.csprojAssemblyReference.cache

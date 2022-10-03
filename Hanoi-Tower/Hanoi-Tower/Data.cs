@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Hanoi_Tower
 {
@@ -12,6 +13,11 @@ namespace Hanoi_Tower
         public int DiscN;
         public int From;
         public int To;
+        public bool selected = false;
+        public string before = "";
+        public List<Panel> TowersP, Discs;
+        public List<Label> Labels;
+        public Form1 f;
         public Data(int from, int to, int discN)
         {
             From = from;
