@@ -26,6 +26,7 @@ namespace Hanoi_Tower
             data.f.Hide();
             this.FormClosing += NeHaljonMeg;
             InitDisplay();
+           
         }
         private void NeHaljonMeg(object sender, EventArgs e)
         {
@@ -45,6 +46,5 @@ namespace Hanoi_Tower
                 if (l.Name.Contains("Disc")) l.BringToFront();
             }
         }
-
     }
 }

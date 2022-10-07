@@ -17,12 +17,11 @@ namespace Hanoi_Tower
             InitializeComponent();
             Icon = Properties.Resources.vodor1;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (numericUpDown2.Value == numericUpDown3.Value)   //error check, the start and the destination tower cant be the same
             {
-                MessageBox.Show("NEM", "NEM", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Nem egyezhet a két oszlop","", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
             else
             {
@@ -30,7 +29,5 @@ namespace Hanoi_Tower
                 gamm.Show();
             }
         }
-
-
     }
 }

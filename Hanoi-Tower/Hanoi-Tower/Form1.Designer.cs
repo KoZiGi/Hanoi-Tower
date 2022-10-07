@@ -78,7 +78,7 @@ namespace Hanoi_Tower
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Spelara";
+            this.button1.Text = "Játék";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -86,7 +86,7 @@ namespace Hanoi_Tower
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(12, 86);
             this.numericUpDown2.Maximum = new decimal(new int[] {
-            10,
+            3,
             0,
             0,
             0});
@@ -117,7 +117,7 @@ namespace Hanoi_Tower
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(107, 86);
             this.numericUpDown3.Maximum = new decimal(new int[] {
-            10,
+            3,
             0,
             0,
             0});

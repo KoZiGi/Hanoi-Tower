@@ -19,13 +19,7 @@ namespace Hanoi_Tower
             data.TowersP = GenTowers();
             data.Labels = GenTowerLabels();
             To = to;
-        }
-        public List<Panel> GenPanels()
-        {
-            List<Panel> towers = GenTowers();
-            List<Panel> discs = GenDiscs();
-            towers.AddRange(discs);
-            return towers;
+
         }
         private List<Panel> GenDiscs()
         {
@@ -130,16 +124,11 @@ namespace Hanoi_Tower
                 i++;
             }
         }
-        public void ModifyDisc(Panel disc, int index, int height, List<Panel> towers)
-        {
-            disc.Left = towers[index].Left - (disc.Width/2);
-            disc.Top = data.DiscN * 15 - height * 10;
-        }
         public void Move(int start, int dest) //checks if the move is valid and moves the discs
         {
             if (data.Towers[start].Count==0)
             {
-                MessageBox.Show("pnjiom ");
+                
             }
             else if (data.Towers[dest].Count == 0)
             {
@@ -178,7 +167,7 @@ namespace Hanoi_Tower
                        
                     else
                     {
-                        MessageBox.Show("Akkor kétségben vonhatatlanul jogomban áll nem itt lenni.");
+                        MessageBox.Show("Akkor kétségbevonhatatlanul jogomban áll nem itt lenni.");
                         Game.ActiveForm.Close();
                         data.f.Close();
                     }

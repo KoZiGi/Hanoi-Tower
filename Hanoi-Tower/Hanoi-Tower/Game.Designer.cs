@@ -35,7 +35,7 @@ namespace Hanoi_Tower
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 466);
+            this.ClientSize = new System.Drawing.Size(442, 191);
             this.Name = "Game";
             this.Text = "Game";
             this.ResumeLayout(false);
