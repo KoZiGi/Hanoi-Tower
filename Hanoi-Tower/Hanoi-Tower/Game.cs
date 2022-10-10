@@ -42,9 +42,15 @@ namespace Hanoi_Tower
                 Controls.Add(l);
             foreach (Control l in Controls)
             {
-                if (l.Name.Contains("Lbl"))  l.Click += functions.TowerClick;
+                if (l.Name.Contains("Lbl")) 
+                {
+                    l.Click += functions.TowerClick;
+                    Height = data.DiscN * 15 + 100;
+                    MaximumSize = new Size(Width,data.DiscN * 15 + 100);
+                }
                 if (l.Name.Contains("Disc")) l.BringToFront();
             }
+
         }
     }
 }
