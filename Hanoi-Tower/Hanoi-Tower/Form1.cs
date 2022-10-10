@@ -21,7 +21,7 @@ namespace Hanoi_Tower
         {
             if (numericUpDown2.Value == numericUpDown3.Value)   //error check, the start and the destination tower cant be the same
             {
-                MessageBox.Show("Nem egyezhet a két oszlop","", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Nem egyezhet a két oszlop","", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

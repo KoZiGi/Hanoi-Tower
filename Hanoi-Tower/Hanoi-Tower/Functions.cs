@@ -37,6 +37,7 @@ namespace Hanoi_Tower
         }
         private Label GenLabel(string text, int x)
         {
+
             return new Label()
             {
                 Text = GetWhich(text),
