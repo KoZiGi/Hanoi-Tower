@@ -47,6 +47,7 @@ namespace Hanoi_Tower
                     l.Click += functions.TowerClick;
                     Height = data.DiscN * 15 + 100;
                     MaximumSize = new Size(Width,data.DiscN * 15 + 100);
+                    MinimumSize = new Size(Width, data.DiscN * 15 + 100);
                 }
                 if (l.Name.Contains("Disc")) l.BringToFront();
             }
